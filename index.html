@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="script" href="index.js">
+</head>
+<body>
+    <div class="box">
+        <h1>Temperature Converter</h1>
+        <div class="converter">
+            <table>
+                <tr><td>
+                    <select name="option1" id="first">
+           /             <option value="c">Celsius</option>
+                        <option value="f">Fahranheit</option>
+                        <option value="k">Kelvin</option>
+                    </select>
+                </td>
+            <td>
+                <input type="text" id="var1" placeholder="Enter a value">
+            </td></tr>
+           <tr>
+            <td>
+                 <select name="option2" id="second">
+                        <option value="f">Fahranheit</option>
+                        <option value="k">Kelvin</option>
+           /            <option value="c">Celsius</option>
+                       
+                    </select>
+            </td>
+            <td>
+                <input type="text" id="var2" placeholder="Result"> 
+            </td>
+           </tr>
+            </table>
+        </div>
+        <button onclick="con()">convert</button>
+    </div>
+</body>
+<script>
+    
+    function con(){
+    let a=parseFloat(document.getElementById("var1").value);
+    let y=document.getElementById("first").value;
+    let z=document.getElementById("second").value;
+    if(y=="c"){
+            if(z=="c"){
+                    document.getElementById("var2").value=a+" degree";
+            }
+            else if(z=="f"){
+                a=(a*9/5)+32;
+                a=a.toFixed(2)
+                document.getElementById("var2").value=a+" degree";
+            }
+            else{
+                 a=273.15+a;
+                 a=a.toFixed(2)
+                document.getElementById("var2").value=a+" K";
+             }
+    }
+    else if(y=="f"){
+          if(z=="c"){
+                a=(a-32)*5/9;
+                a=a.toFixed(2)
+                document.getElementById("var2").value=a+" degree";
+            }
+            else if(z=="f"){
+                document.getElementById("var2").value=a+" degree";
+            }
+            else{
+                  a=(a-32)*5/9+273.15;
+                  a=a.toFixed(2)
+                document.getElementById("var2").value=a+" K";
+            }  
+        }
+        else{
+            
+            if(z=="c"){
+                a=a-273.15;
+                a=a.toFixed(2)
+                document.getElementById("var2").value=a+" degree";
+            }
+            else if(z=="f"){
+                a=(a-273.15)*9/5+32;
+                a=a.toFixed(2)
+                document.getElementById("var2").value=a+" degree";
+            }
+            else{
+                document.getElementById("var2").value=a+" K";
+            }     
+
+        } 
+    }
+
+</script>
+</html>

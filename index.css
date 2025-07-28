@@ -1,0 +1,49 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(27, 139, 184);
+    padding: 50px;
+}
+h1{
+    text-align: center;
+    padding: 10px;
+}
+
+.converter{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 30px;
+
+}
+tr,td{
+    padding: 10px;
+}
+input,select{
+    border-bottom: 1px solid rgb(182, 177, 177);
+    border-radius: 5px;
+    height:25px;
+}
+button{
+    height: 30px;
+    width: 80px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    background-color: rgb(63, 168, 216);
+    font-size: 15px;
+}
+
+.box{
+   text-align: center;
+   border: 1px solid black;
+   height: 270px;
+   width: 250px;
+   padding: 30px;
+   border-radius: 7px;
+   background-color: rgb(224, 235, 248);
+}
